@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.container {
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-list {
+    background-color: rgba(216, 216, 216, 0.432);
+    backdrop-filter: blur(3px);
+    width: 80%;
+    height: 70%;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.tasks {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-right: 5px;
+}
+
+.inputs {
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+}
+
+.inputs input {
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #0a0a0abe;
+    color: white;
+    backdrop-filter: blur(10px);
+    transition:
+        background-color 0.25s,
+        color 0.25s;
+}
+
+.task-input {
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.task-input::placeholder {
+    color: rgba(255, 255, 255, 0.521);
+}
+
+.task-input:hover {
+    background-color: #070707f5;
+}
+
+.add-button {
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+.task-box {
+    display: flex;
+    align-items: center;
+    background-color: #0a0a0abe;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: rgb(223, 223, 223);
+}
+
+.task-box h3 {
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+.edit-input {
+    background-color: rgba(255, 255, 255, 0.158);
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    flex-grow: 1;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+.options img {
+    cursor: pointer;
+    transition: filter 0.25s;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.options img:hover {
+    filter: brightness(.5);
+}
+
+@media (max-width: 425px) {
+    .inputs {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .task-list {
+        width: 95%;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .add-button {
+        background-color: aquamarine !important;
+        color: black !important;
+    }
+
+    .task-input {
+        background-color: #070707f5 !important;
+    }
+    .options {
+        align-self: flex-start;
+    }
+    .edit-input {
+        padding: 0;
+        margin: 0;
+        margin-right: .5rem;
+        padding: 1rem .3rem;
+    }
+}
